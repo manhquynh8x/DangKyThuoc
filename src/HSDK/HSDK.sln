@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositionRoot", "CompositionRoot\CompositionRoot.csproj", "{F9BEE05E-198C-4917-8408-DA3C069FC023}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infracture", "Infracture\Infracture.csproj", "{F00AC7A0-CBAA-46E2-83FF-8C9FF7742C5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{9AA7CF3B-D83B-49D9-9C05-3DF4E2D47BDC}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9BEE05E-198C-4917-8408-DA3C069FC023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9BEE05E-198C-4917-8408-DA3C069FC023}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9BEE05E-198C-4917-8408-DA3C069FC023}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9BEE05E-198C-4917-8408-DA3C069FC023}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F00AC7A0-CBAA-46E2-83FF-8C9FF7742C5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F00AC7A0-CBAA-46E2-83FF-8C9FF7742C5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F00AC7A0-CBAA-46E2-83FF-8C9FF7742C5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F00AC7A0-CBAA-46E2-83FF-8C9FF7742C5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AA7CF3B-D83B-49D9-9C05-3DF4E2D47BDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AA7CF3B-D83B-49D9-9C05-3DF4E2D47BDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AA7CF3B-D83B-49D9-9C05-3DF4E2D47BDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AA7CF3B-D83B-49D9-9C05-3DF4E2D47BDC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
