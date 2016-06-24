@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Namespace="DB1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
+        <EntityContainer Name="DB1TargetContainer" >
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="DB1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="DB1Container" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="LoaiHoSoes" EntityType="DB1.LoaiHoSo" />
+          <EntitySet Name="HoSoes" EntityType="DB1.HoSo" />
+          <AssociationSet Name="LoaiHoSoHoSo" Association="DB1.LoaiHoSoHoSo">
+            <End Role="LoaiHoSo" EntitySet="LoaiHoSoes" />
+            <End Role="HoSo" EntitySet="HoSoes" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="LoaiHoSo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="HoSoes" Relationship="DB1.LoaiHoSoHoSo" FromRole="LoaiHoSo" ToRole="HoSo" />
+        </EntityType>
+        <EntityType Name="HoSo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="LoaiHoSo" Relationship="DB1.LoaiHoSoHoSo" FromRole="HoSo" ToRole="LoaiHoSo" />
+          <Property Name="LoaiHoSoId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="LoaiHoSoHoSo">
+          <End Type="DB1.LoaiHoSo" Role="LoaiHoSo" Multiplicity="1" />
+          <End Type="DB1.HoSo" Role="HoSo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LoaiHoSo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="HoSo">
+              <PropertyRef Name="LoaiHoSoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
+        <Alias Key="Model" Value="DB1" />
+        <Alias Key="Target" Value="DB1.Store" />
+        <EntityContainerMapping CdmEntityContainer="DB1Container" StorageEntityContainer="DB1TargetContainer">
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
