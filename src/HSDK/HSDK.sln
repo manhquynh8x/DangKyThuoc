@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.DependencyInjection", "CompositionRoot\Infrastructure.DependencyInjection.csproj", "{F9BEE05E-198C-4917-8408-DA3C069FC023}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infracture\Infrastructure.csproj", "{F00AC7A0-CBAA-46E2-83FF-8C9FF7742C5F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{F8910957-6082-4B03-91F2-56F6DDF273EE}"
@@ -25,10 +23,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F9BEE05E-198C-4917-8408-DA3C069FC023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F9BEE05E-198C-4917-8408-DA3C069FC023}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F9BEE05E-198C-4917-8408-DA3C069FC023}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F9BEE05E-198C-4917-8408-DA3C069FC023}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F00AC7A0-CBAA-46E2-83FF-8C9FF7742C5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F00AC7A0-CBAA-46E2-83FF-8C9FF7742C5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F00AC7A0-CBAA-46E2-83FF-8C9FF7742C5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -50,7 +44,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{F9BEE05E-198C-4917-8408-DA3C069FC023} = {E3EDFAC4-EE93-4A77-A032-F7CEEE3193C9}
 		{F00AC7A0-CBAA-46E2-83FF-8C9FF7742C5F} = {E3EDFAC4-EE93-4A77-A032-F7CEEE3193C9}
 		{F8910957-6082-4B03-91F2-56F6DDF273EE} = {9A752789-408D-40AA-902F-CCCEFB5FCEBC}
 		{164E8D83-6BDD-4761-98CF-B0B7C0350D53} = {E3EDFAC4-EE93-4A77-A032-F7CEEE3193C9}
